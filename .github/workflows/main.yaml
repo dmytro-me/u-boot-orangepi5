@@ -1,5 +1,5 @@
 name: Build U-Boot for Orange Pi 5
-on: [push]
+on: [push, workflow_dispatch]
 env:
   BUILDX_NO_DEFAULT_ATTESTATIONS: 1
   SOURCE_DATE_EPOCH: 1712055538
@@ -12,9 +12,9 @@ jobs:
     strategy:
       matrix:
         board:
-          - title: Orange Pi 5
-            name: orangepi5
-            defconfig: orangepi-5-rk3588s
+          # - title: Orange Pi 5
+          #   name: orangepi5
+          #   defconfig: orangepi-5-rk3588s
           - title: Orange Pi 5 Plus
             name: orangepi5-plus
             defconfig: orangepi-5-plus-rk3588
